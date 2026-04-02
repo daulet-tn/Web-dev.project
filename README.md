@@ -12,6 +12,7 @@ A full-stack web application developed as part of our university project.
 |------|----------------|
 | 🧑‍💻 Akhmetzhanova Alua | https://github.com/A1uaa |
 | 🧑‍💻 Akhmet Bunur | https://github.com/binur-lab |
+| 🧑‍💻 Tanirberdi Daulet | https://github.com/daulet-tn |
 
 ---
 
