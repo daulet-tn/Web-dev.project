@@ -1,0 +1,21 @@
+.card {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+  }
+  
+  input {
+    width: 100%;
+    margin: 10px 0;
+    padding: 8px;
+  }
+  
+  button {
+    padding: 10px;
+  }
+  
+  .error {
+    color: red;
+  }

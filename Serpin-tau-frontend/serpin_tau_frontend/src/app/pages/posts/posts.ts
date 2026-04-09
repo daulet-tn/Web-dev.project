@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-posts',
-  imports: [],
+  standalone: true,
   templateUrl: './posts.html',
-  styleUrl: './posts.css',
+  styleUrl: './posts.css'
 })
 export class Posts {}
