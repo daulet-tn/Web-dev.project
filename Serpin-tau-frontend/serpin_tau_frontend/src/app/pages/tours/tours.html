@@ -1,1 +1,23 @@
-<p>tours works!</p>
+<div class="tours-page">
+    <h1>🏔️ Serpin Tau Tours</h1>
+  
+    <div class="tour-list">
+      @for (tour of tours; track tour.id) {
+        <div class="tour-card">
+          <img [src]="tour.image" alt="tour">
+  
+          <div class="tour-content">
+            <h2>{{ tour.title }}</h2>
+            <p>{{ tour.description }}</p>
+  
+            <div class="info">
+              <span>📍 {{ tour.location }}</span>
+              <span>💰 {{ tour.price }}$</span>
+            </div>
+  
+            <button (click)="register(tour.id)">Register</button>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
