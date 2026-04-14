@@ -11,7 +11,8 @@ A full-stack web application developed as part of our university project.
 | Name | GitHub Profile |
 |------|----------------|
 | 🧑‍💻 Akhmetzhanova Alua | https://github.com/A1uaa |
-| 🧑‍💻 Akhmet Bunur | https://github.com/binur-lab |
+| 🧑‍💻 Akhmet Binur | https://github.com/binur-lab |
+| 🧑‍💻 Daulet Tangirberdi  | https://github.com/daulet-tn |
 
 ---
 
