@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Алматы Ауасы | Проблема және Шешім</title>
+  <meta name="description" content="Алматы қаласындағы ауа ластануы, оның себептері, салдары және шешу жолдарытуралы толық ақпарат.">
+  
+  <!-- Google Fonts: Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-content">
+      <a href="#" class="logo">
+        <i data-lucide="wind" class="logo-icon"></i>
+        <span>Алматы<strong>Ауа</strong></span>
+      </a>
+      <div class="nav-links">
+        <a href="#hero">Басты бет</a>
+        <a href="#air-quality">Жағдай</a>
+        <a href="#causes">Себептері</a>
+        <a href="#health">Денсаулық</a>
+        <a href="#solutions">Шешімдер</a>
+        <a href="#action" class="btn-primary-outline">Бүгін не істеймін?</a>
+      </div>
+      <button class="menu-toggle" id="menu-toggle">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div class="hero-bg"></div>
+    <div class="container hero-content">
+      <div class="hero-badge">Экологиялық мәселе</div>
+      <h1 class="hero-title">Алматының ауасы:<br>Тұман ба, әлде түтін бе?</h1>
+      <p class="hero-desc">
+        Бүгін Алматы әлемдегі ең лас ауалы қалалардың қатарына жиі енеді. Мәселенің түбірін ұғынып, бірге шешу жолдарын іздейік.
+      </p>
+      <div class="hero-buttons">
+        <a href="#air-quality" class="btn btn-primary">Мәселені білу</a>
+        <a href="#action" class="btn btn-secondary">Үлес қосу</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Current Air Quality -->
+  <section id="air-quality" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Қазіргі жағдай қандай?</h2>
+        <p class="section-desc">AQI (Ауа сапасының индексі) арқылы Алматы ауасын бағалау</p>
+      </div>
+      
+      <div class="aqi-grid">
+        <div class="aqi-card main-aqi">
+          <h3>Бүгінгі орташа AQI</h3>
+          <div class="aqi-value" id="current-aqi">152</div>
+          <div class="aqi-status" id="aqi-status">Зиянды (Қызыл деңгей)</div>
+          <p>Ауадағы PM2.5 бөлшектерінің деңгейі ДДҰ ұсынған қауіпсіздік шегінен 12 есе жоғары.</p>
+        </div>
+        
+        <div class="aqi-chart-container">
+          <canvas id="aqiChart"></canvas>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Causes -->
+  <section id="causes" class="section bg-light">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2 class="section-title">Ауа неге ластанады?</h2>
+        <p class="section-desc">Алматыдағы түтіннің 4 негізгі себебі</p>
+      </div>
+      
+      <div class="cards-grid">
+        <!-- Cause 1 -->
+        <div class="card cause-card">
+          <div class="card-icon"><i data-lucide="car"></i></div>
+          <h3>Көлік түтіні</h3>
+          <p>Қалада жарты миллионнан астам автокөлік бар. Олардың көбі ескі және экологиялық стандарттарға сай емес, пайдаланылған газдары үлкен үлес қосады.</p>
+        </div>
+        
+        <!-- Cause 2 -->
+        <div class="card cause-card">
+          <div class="card-icon"><i data-lucide="flame"></i></div>
+          <h3>Көмірмен жылыту</h3>
+          <p>Жылу электр орталықтары (ЖЭО-2, ЖЭО-3) және қала шетіндегі жеке сектор үйлері әлі күнге дейін көп мөлшерде көмір жағады.</p>
+        </div>
+        
+        <!-- Cause 3 -->
+        <div class="card cause-card">
+          <div class="card-icon"><i data-lucide="factory"></i></div>
+          <h3>Өнеркәсіп</h3>
+          <p>Зауыттар мен өндіріс орындарынан шығатын қалдықтар ауа сапасын төмендетеді, әсіресе қаланың төменгі бөлігінде.</p>
+        </div>
+        
+        <!-- Cause 4 -->
+        <div class="card cause-card">
+          <div class="card-icon"><i data-lucide="mountain"></i></div>
+          <h3>Географиялық орын</h3>
+          <p>Алматы тау бөктеріндегі қазаншұңқырда орналасқан. Желдің аздығынан түтін табиғи жолмен таралып кете алмайды.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Health Impact -->
+  <section id="health" class="section">
+    <div class="container">
+      <div class="health-flex">
+        <div class="health-content">
+          <div class="badge-danger">Қауіпті</div>
+          <h2 class="section-title">Денсаулыққа әсері</h2>
+          <p>Улы бөлшектер (PM2.5) өте ұсақ болғандықтан, өкпе арқылы қанға тікелей өтеді. Бұл көптеген созылмалы аурулардың басталуына себепші.</p>
+          
+          <ul class="health-list">
+            <li>
+              <div class="list-icon"><i data-lucide="lungs"></i></div> <!-- We will use some icon mapped to lungs, or heart -->
+              <div>
+                <strong>Тыныс алу жолдары</strong>
+                <p>Демікпе, бронхит және жөтелдің жиілеуі.</p>
+              </div>
+            </li>
+            <li>
+              <div class="list-icon"><i data-lucide="heart-pulse"></i></div>
+              <div>
+                <strong>Жүрек-қан тамырлары</strong>
+                <p>Қан қысымының көтерілуі, инфаркт пен инсульт қаупінің артуы.</p>
+              </div>
+            </li>
+            <li>
+              <div class="list-icon"><i data-lucide="baby"></i></div>
+              <div>
+                <strong>Иммунитет және балалар</strong>
+                <p>Балғын ағзаның ауруға қарсы тұру қабілетінің төмендеуі.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="health-image">
+          <div class="lungs-illustration">
+             <i data-lucide="activity" class="giant-icon pulsing"></i>
+             <div class="glow"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solutions -->
+  <section id="solutions" class="section bg-gradient">
+    <div class="container text-center text-white">
+      <h2 class="section-title text-white">Шешу жолдары қандай?</h2>
+      <p class="section-desc text-white" style="opacity: 0.8;">Мемлекет пен қала деңгейіндегі стратегиялық қадамдар</p>
+      
+      <div class="solutions-grid">
+        <div class="solution-item">
+          <div class="circle-icon"><i data-lucide="zap"></i></div>
+          <h4>ЖЭО-ларды газға көшіру</h4>
+          <p>Энергия өндіруде көмірдің орнына экологиялық таза газды қолдану.</p>
+        </div>
+        <div class="solution-item">
+          <div class="circle-icon"><i data-lucide="bus"></i></div>
+          <h4>Қоғамдық көлікті дамыту</h4>
+          <p>Метро желісін ұзарту, электробустар санын арттыру, BRT жолақтарын салу.</p>
+        </div>
+        <div class="solution-item">
+          <div class="circle-icon"><i data-lucide="tree-pine"></i></div>
+          <h4>Қаланы көгалдандыру</h4>
+          <p>Табиғи "сүзгілер" ретінде ағаштар мен саябақтарды көбейту.</p>
+        </div>
+        <div class="solution-item">
+          <div class="circle-icon"><i data-lucide="power-off"></i></div>
+          <h4>Жеке секторды газдандыру</h4>
+          <p>Барлық жер үйлер мен қала маңындағы ауылдарды толықтай газға қосу.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to action (Personal) -->
+  <section id="action" class="section">
+    <div class="container">
+      <div class="action-box">
+        <div class="action-text">
+          <h2>Бүгін сіз не істей аласыз?</h2>
+          <p>Үлкен өзгерістер кішкентай қадамдардан басталады. Қала экологиясына нақты үлес қосудың жолдары:</p>
+        </div>
+        
+        <div class="action-list">
+          <div class="action-card">
+            <i data-lucide="footprints" class="action-icon"></i>
+            <h4>Көліктен бас тарту</h4>
+            <p>Аптасына кем дегенде бір күн жеке көлік орнына метро, автобус немесе велосипед қолданыңыз.</p>
+          </div>
+          <div class="action-card">
+            <i data-lucide="sun" class="action-icon"></i>
+            <h4>Энергия үнемдеу</h4>
+            <p>Жарықты, суды үнемдеу арқылы ЖЭО-ға түсетін күшті азайтыңыз.</p>
+          </div>
+          <div class="action-card">
+            <i data-lucide="recycle" class="action-icon"></i>
+            <h4>Қалдықты сұрыптау</h4>
+            <p>Қоқысты өртемеңіз, пластик пен қағазды қайта өңдеуге тапсырыңыз.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <i data-lucide="wind" class="logo-icon"></i> Алматы<strong>Ауа</strong>
+          <p style="margin-top: 10px; font-size: 0.9rem; opacity: 0.7;">Алматы қаласының экологиялық мәселесін көтеретін ақпараттық жоба.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Бөлімдер</h4>
+          <ul>
+            <li><a href="#hero">Басты бет</a></li>
+            <li><a href="#air-quality">Қазіргі жағдай</a></li>
+            <li><a href="#causes">Себептері</a></li>
+            <li><a href="#solutions">Шешімдер</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Алматы Ауасы. Барлық құқықтар қорғалған. <br/>Дизайн және әзірлеу: Antigravity.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lucide Icons Script -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Main Script -->
+  <script src="js/script.js"></script>
+</body>
+</html>

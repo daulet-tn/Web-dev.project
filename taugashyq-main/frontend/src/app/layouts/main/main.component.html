@@ -1,0 +1,13 @@
+<div class="wrapper">
+    <h2>Popular categories</h2>
+
+    <div class="wrapper-list">
+        <div class="wrapper-list-item" *ngFor="let category of categories">
+            <a (click)="onCategoryClick(category.id)">
+                <img src="{{ category.imgURL }}" alt="" />
+                <p>{{ category.title }}</p>
+            </a>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,31 @@
+<div class="wrapper">
+    <div class="wrapper-navbar">
+        <div class="wrapper-navbar-image">
+            <a href="">
+            </a>
+        </div>
+
+        <div class="wrapper-navbar-right">
+            <a class="link" routerLink="/recipes">Mountains</a>
+            <a class="link" routerLink="/master-classes">Mountain Hiking Tours</a>
+
+
+            <app-button class="createRecipe" label="Create post" (click)="handleCreateRecipe()" *ngIf="isLogged"></app-button>
+
+            <app-button class="createMasterClass" label="Create tours" (click)="handleCreateMasterClass()" *ngIf="isLogged"></app-button>
+
+            <app-button label="Log in" mat-button (click)="openLoginDialog()" *ngIf="!isLogged"></app-button>
+
+            <app-button class="signup" label="Sign up" (click)="openSignUpDialog()" *ngIf="!isLogged"></app-button>
+
+            <app-button class="signup" label="Logout" (click)="handleLogout()" *ngIf="isLogged"></app-button>
+        </div>
+    </div>
+
+
+
+    <div class="wrapper-input">
+        <input type="text" placeholder="find mountains/tours" [(ngModel)]="searchQuery" (input)="onSearchInput()" />
+        <app-button label="Search"></app-button>
+    </div>
+</div>
